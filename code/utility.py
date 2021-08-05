@@ -33,7 +33,6 @@ def load_config(path="configs/default.yaml") -> dict:
         cfg = yaml.safe_load(ymlfile)
     return cfg
 
-
 def make_logger(log_file: str = None, name='logger'):
     """
     Create a logger for logging the training/testing process.
@@ -53,5 +52,4 @@ def make_logger(log_file: str = None, name='logger'):
     sh.setLevel(logging.INFO)
     sh.setFormatter(formatter)
     logging.getLogger("").addHandler(sh)
-    logger.info("Hello! This is TCC")
     return logger
