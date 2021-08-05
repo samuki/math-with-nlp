@@ -19,7 +19,7 @@ def worker(i):
     logger.info('Question number %8d : %s', i, question)
     logger.info('Prediciton: %s', first_answer)
     logger.info('Ground truth %s', ground_truth)
-    logger.info('The result is %b', first_answer==ground_truth)
+    logger.info('The result is %r', first_answer==ground_truth)
     logger.info('\n')
     results[i]= {'Question':question, 'Prediction':first_answer, 'Ground truth':ground_truth}
     save_data(results, out_path)
