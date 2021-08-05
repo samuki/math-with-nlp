@@ -3,8 +3,6 @@ import openai
 from GPTJ.Basic_api import SimpleCompletion
 from GPTJ.gptj_api import Completion
 
-
-
 def query_gpt3(key, prompt, engine='ada'):
     openai.api_key = key
     response = openai.Completion.create(
@@ -29,9 +27,8 @@ def simple_query_gptj(prompt, max_length=100, temperature=0.01, top_probability=
     response = query.simple_completion()
     return response
 
-def query_gptj(prompt, context="Task", examples={}, User="Task", Bot="Calculator", \
+def query_gptj(prompt, context_setting, context="Task", examples={}, User="Task", Bot="Calculator", \
     max_length=100, temperature=0.01, top_probability=1.):
-    context_setting = Completion(context, examples)
     response = context_setting.completion(prompt,
               user=User,
               bot=Bot,
