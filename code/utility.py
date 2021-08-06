@@ -20,7 +20,7 @@ def load_data(path, is_df=False):
         return pd.read_pickle(path+'.pkl')
     else:
         with open(path + '.pkl', 'rb') as f:
-            return pickle.load(f)
+            return pd.DataFrame.from_dict(pickle.load(f),orient='index')
 
 def load_config(path="configs/default.yaml") -> dict:
     """
