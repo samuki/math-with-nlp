@@ -17,9 +17,9 @@ def save_data(data, path, is_df=False):
 
 def load_data(path, is_df=False):
     if is_df:
-        return pd.read_pickle(path+'.pkl')
+        return pd.read_pickle(path)
     else:
-        with open(path + '.pkl', 'rb') as f:
+        with open(path, 'rb') as f:
             return pd.DataFrame.from_dict(pickle.load(f),orient='index')
 
 def load_config(path="configs/default.yaml") -> dict:
