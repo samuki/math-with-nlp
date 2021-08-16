@@ -1,0 +1,8 @@
+name: 'arithmetic__div'
+task: 'arithmetic__div_medium'
+in_path: 'data/mathematics_dataset-v1.0/train-medium/'
+out_path: 'experiments/'
+example: [0,10]
+start: 0
+end: null
+pool_size: 100

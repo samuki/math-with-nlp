@@ -1,5 +1,5 @@
-name: 'arithmetic__add_sub'
-task: 'arithmetic__add_or_sub'
+name: 'arithmetic__add_sub_multiple'
+task: 'arithmetic__add_sub_multiple'
 in_path: 'data/mathematics_dataset-v1.0/train-easy/'
 out_path: 'experiments/'
 example: [0,10]
