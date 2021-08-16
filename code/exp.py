@@ -28,8 +28,8 @@ def conduct_experiment(cfg):
     global dataset, examples, context_setting, in_path, out_path, results,\
          context, logger
     log_string = "{}.log".format('logs/'+cfg['task'])
-    logger = make_logger(log_string+"logger")
-    in_path, out_path = cfg['in_path']+cfg['task']+'.txt', cfg['out_path']+cfg['task']
+    logger = make_logger(log_string)
+    in_path, out_path = cfg['in_path']+cfg['name']+'.txt', cfg['out_path']+cfg['task']
     manager = Manager()
     results = manager.dict()
     dataset = read_saxton_file(in_path)
