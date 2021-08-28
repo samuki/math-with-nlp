@@ -1,7 +1,8 @@
 from argparse import ArgumentParser
-from query import query_gpt3, query_gptj
+from query import query_gpt3, query_gptj, query_gptj_original_api
 from utility import load_key, load_config
 from exp import conduct_experiment
+from GPTJ.gptj_api import Completion
 
 
 parser = ArgumentParser()
@@ -24,12 +25,17 @@ def gptj_calculation_dummy_test():
         "7 + 1": "8"
     }
     prompt = "48 / 6"
-    print(query_gptj(prompt=prompt, examples=examples, context=context))
+    context =  "\n".join([key+"\n"+examples[key] for key in examples])
+    #context_setting = Completion("", examples)
+    #print(query_gptj(prompt=prompt, context_setting=context_setting))
+    #print(query_gptj_original_api(context + '\n'+ +prompt+ '\n'))
 
 def main():
     args = parser.parse_args()
     cfg = load_config(args.config)
-    conduct_experiment(cfg)    
+    conduct_experiment(cfg)
+    #query_original_api(prompt)
+    #gptj_calculation_dummy_test()
 
 if __name__ =="__main__":
     main()

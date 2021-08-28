@@ -1,8 +1,9 @@
 name: 'arithmetic__div'
-task: 'arithmetic__div_hard'
+task: 'arithmetic__div_hard_gpt3'
 in_path: 'data/mathematics_dataset-v1.0/train-hard/'
 out_path: 'experiments/'
+engine: 'gpt3_curie'
 example: [0,10]
 start: 0
 end: null
-pool_size: 5
+pool_size: 1

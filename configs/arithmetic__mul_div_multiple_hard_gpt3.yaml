@@ -1,0 +1,9 @@
+name: 'arithmetic__mul_div_multiple'
+task: 'arithmetic__mul_div_multiple_hard_gpt3'
+in_path: generated/train-hard/'
+out_path: 'experiments/'
+engine: 'gpt3_curie'
+example: [0,10]
+start: 0
+end: null
+pool_size: 1

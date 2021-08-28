@@ -1,0 +1,8 @@
+name: 'arithmetic__add_or_sub'
+task: 'arithmetic__add_or_sub_hard_generated'
+in_path: 'generated/train-hard/'
+out_path: 'experiments/'
+example: [0,10]
+start: 0
+end: null
+pool_size: 1

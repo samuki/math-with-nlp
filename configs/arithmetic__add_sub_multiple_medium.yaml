@@ -5,4 +5,4 @@ out_path: 'experiments/'
 example: [0,10]
 start: 0
 end: null
-pool_size: 100
+pool_size: 5

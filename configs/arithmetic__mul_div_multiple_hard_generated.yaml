@@ -1,6 +1,6 @@
 name: 'arithmetic__mul_div_multiple'
-task: 'arithmetic__mul_div_multiple_medium'
-in_path: 'data/mathematics_dataset-v1.0/train-medium/'
+task: 'arithmetic__mul_div_multiple_hard_generated'
+in_path: 'generated/train-hard/'
 out_path: 'experiments/'
 example: [0,10]
 start: 0
